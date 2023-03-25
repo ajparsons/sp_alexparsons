@@ -1,0 +1,2 @@
+#!/bin/sh
+[ ! -d "stringprint2/stringprint2" ] && git submodule update --init || echo "Already exists"

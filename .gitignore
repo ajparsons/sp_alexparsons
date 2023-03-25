@@ -1,0 +1,5 @@
+_conf/stringprint_settings.yaml
+.vagrant/
+.env
+_docs/*/*.zip
+*.pyc

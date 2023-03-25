@@ -1,0 +1,25 @@
+title: '{{cookiecutter.title}}'
+subtitle: '{{cookiecutter.subtitle}}'
+short_title: '{{cookiecutter.short_title}}'
+description: '{{cookiecutter.description}}'
+byline: 'by {{cookiecutter.authors}}'
+copyright: ''
+authors: {{cookiecutter.authors}}
+cite_as: {{cookiecutter.authors}}
+file_source: document.md
+publish_date: {{cookiecutter.publish_date}}
+sections_over_pages: false
+display_notes: true
+display_footnotes_at_foot: true
+pdf: {{cookiecutter.slug}}.pdf
+book_cover: {{cookiecutter.slug}}-cover.png
+{% if cookiecutter.google_doc_url %}google_doc_url: {{cookiecutter.google_doc_url}}{% endif %}
+{% if cookiecutter.unsplash_title_image_url %}unsplash_title_image_url: {{cookiecutter.unsplash_title_image_url}}{% endif %}
+seed: -1
+# repo slug to match on the mysociety research site - may be different
+repo_slug: {{cookiecutter.mysociety_research_slug}} 
+header:
+  location: default-header-image.jpg
+  size: 6
+commands:
+  preprocess: module::$doc/preprocess.py:Preprocess

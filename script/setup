@@ -1,0 +1,4 @@
+#!/bin/sh
+# create or update database
+cp -n stringprint2/stringprint2/proj/conf/config-example.yaml stringprint2/stringprint2/proj/conf/config.yaml
+"$(dirname "$0")/../stringprint2/stringprint2/script/manage" migrate

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+python stringprint2/stringprint2/manage.py runserver 0.0.0.0:8000

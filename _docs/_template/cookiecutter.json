@@ -1,0 +1,12 @@
+{
+    "slug": "slug-for-document",
+    "mysociety_research_slug": "{{cookiecutter.slug}}",
+    "title": "Report title",
+    "subtitle": "",
+    "google_doc_url": "",
+    "unsplash_title_image_url": "",
+    "short_title": "Two Words",
+    "description": "Description of report for social sharing",
+    "authors": "Comma seperated list of authors",
+    "publish_date": "{% now 'local', '%Y-%m-%d' %}"
+}

@@ -1,0 +1,17 @@
+file_source: document.md
+cite_as: Parsons, Alex
+description: The history and international context of preventing misinformation in political advertising.
+title: 'Free and Fair: Regulating political advertising'
+display_footnotes_at_foot: true
+sections_over_pages: false
+display_notes: false
+display_toc: false
+short_title: Free and Fair
+pdf: Free and Fair.pdf
+header:
+  location: free_and_fair_m.png
+  size: 6
+byline: Alex Parsons
+publish_date: 2020-07-05
+authors: Alex Parsons
+seed: 13

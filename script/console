@@ -1,0 +1,8 @@
+#!/bin/sh
+
+FILE="stringprint2/stringprint2/db.sqlite3"
+if [ ! -f "$FILE" ]; then
+    python stringprint2/stringprint2/manage.py migrate
+fi
+
+python stringprint2/stringprint2/__main__.py "$@"

@@ -1,0 +1,94 @@
+name: Setup new document
+
+env:
+    GDRIVE_SERVICE_USER: ${{ secrets.GDRIVE_SERVICE_USER }}
+    UNSPLASH_CLIENT_ID: ${{ secrets.UNSPLASH_CLIENT_ID }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        type: string
+        description: Article slug ('improving-oversight')
+        required: true
+      mysociety_research_slug:
+        description: Slug in research repo (assumed the same if absent)
+        type: string
+        default: ""
+        required: false
+      title:
+        type: string
+        description: Report title
+        required: true
+      subtitle:
+        type: string
+        default: ""
+        description: Report subtitle (optional)
+        required: false
+      running_head:
+        type: string
+        description: Short two/three word desc for top left header
+        required: true
+      description:
+        type: string
+        description: Description of report for social sharing
+        required: true
+      authors:
+        type: string
+        description: Comma seperated list of authors
+        required: true
+      google_doc_url:
+        type: string
+        default: ""
+        description: Google doc URL of report (Must be public or agent given access)
+        required: false
+      unsplash_title_image_url:
+        type: string
+        default: ""
+        description: Unsplash header image URL
+        required: false
+      publish_date:
+        type: string
+        default: ""
+        description: Date (yyyy-mm-dd). Today's date used if absent.
+        required: false
+
+jobs:
+  create-new-document:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+
+      - name: build docker
+        run: |
+          docker-compose build
+
+      - name: cookiecutter
+        shell: docker-compose run --volume /home/runner:/home/runner/ app bash {0}
+        run: |
+          cookiecutter _docs/_template \
+          --output-dir _docs  \
+          --no-input \
+           slug="${{ github.event.inputs.slug }}" \
+           mysociety_research_slug"=${{ github.event.inputs.mysociety_research_slug }}" \
+           title="${{ github.event.inputs.title }}" \
+           subtitle="${{ github.event.inputs.subtitle }}" \
+           google_doc_url="${{ github.event.inputs.google_doc_url }}" \
+           unsplash_title_image_url="${{ github.event.inputs.unsplash_title_image_url }}" \
+           short_title="${{ github.event.inputs.running_head }}" \
+           description="${{ github.event.inputs.description }}" \
+           authors="${{ github.event.inputs.authors }}" \
+           publish_date="${{ github.event.inputs.date }}"
+
+      - name: preprocess initial data
+        shell: docker-compose run --volume /home/runner:/home/runner/ app bash {0}
+        run: |
+          script/console --setdoc ${{ github.event.inputs.slug }} --load --preprocess
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Added ${{ github.event.inputs.slug }} to _docs folder."

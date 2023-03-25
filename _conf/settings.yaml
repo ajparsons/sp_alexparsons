@@ -1,0 +1,15 @@
+name: research.alexparsons.co.uk
+slug: alexparsons
+twitter: alexparsons
+ga_code: UA-8959962-21
+ga_cookies: false
+publish_root: https://research.alexparsons.co.uk/
+include_favicon: true
+orglinks:
+  alexparsons.co.uk:
+    link: https://alexparsons.co.uk
+    order: 0
+commands:
+  commit: 'script/commit {{article.slug}}'
+  commitall: 'script/commitall'
+  push: 'script/push'

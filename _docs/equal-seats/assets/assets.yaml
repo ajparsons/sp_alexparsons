@@ -1,0 +1,24 @@
+- word-asset-1:
+    caption: ''
+    content_type: image
+    type: png
+- word-asset-2:
+    caption: ''
+    content_type: image
+    type: png
+- table-asset-1:
+    caption: ''
+    content_type: table
+    type: xls
+- table-asset-2:
+    caption: ''
+    content_type: table
+    type: xls
+- table-asset-3:
+    caption: ''
+    content_type: table
+    type: xls
+- table-asset-4:
+    caption: ''
+    content_type: table
+    type: xls

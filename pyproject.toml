@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "stringprint_document_source"
+version = "0.1.0"
+description = "Repo to store stringprint reports for mySociety"
+authors = ["Alex Parsons <alex.parsons@mysociety.org>"]
+
+[tool.poetry.scripts]
+stringprint = 'stringprint2.__main__:main'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+stringprint2 = { path = "stringprint2/", develop = true }
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
