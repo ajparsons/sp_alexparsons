@@ -34,7 +34,7 @@ jobs:
         run: |
           script/console loadall
           script/console render all
-          cp -r conf/_publish_template/* _publish
+          cp -r _conf/_publish_template/* _publish
 
 
       - name: Setup Pages
