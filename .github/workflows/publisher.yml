@@ -1,14 +1,15 @@
-name: Render article
+name: Render and publish article
 
 on:
   workflow_dispatch:
+
 jobs:
-  render-article:
+  build:
     runs-on: ubuntu-latest
     steps:
 
       - name: checkout repo content
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: 'true'
 
@@ -16,18 +17,31 @@ jobs:
         run: |
           docker-compose build
 
-      - name: preprocess
-        if: ${{ github.event.inputs.preprocess == 'true' }}
+      - name: rendederdocs
         shell: docker-compose run --volume /home/runner:/home/runner/ app bash {0}
         run: |
-          script/console --setdoc ${{ github.event.inputs.slug }} --load --preprocess
+          script/console loadall
+          script/console render all
 
-      - name: render and upload
-        if: ${{ github.event.inputs.render == 'true' }}
-        shell: docker-compose run --volume /home/runner/:/home/runner/ app bash {0}
-        run: |
-          script/console --setdoc ${{ github.event.inputs.slug }} --process no-preprocess --publish
+      - name: Setup Pages
+        uses: actions/configure-pages@v1
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          commit_message: Updated from source changes
+          path: _publish
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+
+      - uses: geekyeggo/delete-artifact@v1
+        with:
+          name: github-pages
