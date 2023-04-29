@@ -10,7 +10,3 @@ services:
     working_dir: /workspaces/stringprint_document_source/
     ports:
       - ${PORT:-8000}:8000
-    environment:
-      GDRIVE_SERVICE_USER: ${GDRIVE_SERVICE_USER}
-      MYSOCIETY_TOKEN: ${MYSOCIETY_TOKEN}
-      UNSPLASH_CLIENT_ID: ${UNSPLASH_CLIENT_ID}
