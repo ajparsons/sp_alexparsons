@@ -3,3 +3,4 @@ _conf/stringprint_settings.yaml
 .env
 _docs/*/*.zip
 *.pyc
+_publish

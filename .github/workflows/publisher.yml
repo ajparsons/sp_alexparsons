@@ -1,0 +1,33 @@
+name: Render article
+
+on:
+  workflow_dispatch:
+jobs:
+  render-article:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+
+      - name: build docker
+        run: |
+          docker-compose build
+
+      - name: preprocess
+        if: ${{ github.event.inputs.preprocess == 'true' }}
+        shell: docker-compose run --volume /home/runner:/home/runner/ app bash {0}
+        run: |
+          script/console --setdoc ${{ github.event.inputs.slug }} --load --preprocess
+
+      - name: render and upload
+        if: ${{ github.event.inputs.render == 'true' }}
+        shell: docker-compose run --volume /home/runner/:/home/runner/ app bash {0}
+        run: |
+          script/console --setdoc ${{ github.event.inputs.slug }} --process no-preprocess --publish
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updated from source changes

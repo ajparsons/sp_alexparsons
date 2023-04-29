@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./:/workspaces/stringprint_document_source/
-      - ./stringprint2/proj/conf/config-example.yaml:/workspaces/stringprint_document_source/stringprint2/proj/conf/config.yaml
+      - ./_conf/config.yaml:/workspaces/stringprint_document_source/stringprint2/proj/conf/config.yaml
     working_dir: /workspaces/stringprint_document_source/
     ports:
       - ${PORT:-8000}:8000
