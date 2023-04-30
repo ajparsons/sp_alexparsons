@@ -212,7 +212,7 @@ After the election the Court of Disputed Returns can declare an election void ""
 [^0]: [Electoral Act 1985, South Australia, s 107](http://www.austlii.edu.au/au/legis/sa/consol_act/ea1985103/s107.html)
 [^1]: Law Commission, [Electoral Law: An Interim Report](http://www.lawcom.gov.uk/wp-content/uploads/2016/02/electoral_law_interim_report.pdf), 2016, 13.3 (pg 168)
 
-It is worth noting that the Electoral Commission in South Australia would not to be involved in this, in their 2010 election report saying:
+It is worth noting that the Electoral Commission in South Australia would like not to be involved in this, in their 2010 election report saying:
 
 >[T]here is a real risk that the Electoral Commissioner will appear to have become politicised if she is involved in a significant decision favouring one party over another in the days immediately prior to the election.[^1]
 
@@ -264,7 +264,7 @@ The UCL's Constitution Unit report found general political consensus in favour o
 
 [^0]: Renwick, A., & Palese, M. (2019). [Doing Democracy Better: How can Information and Discourse in Election and Referendum Campaigns in the UK be improved](https://www.ucl.ac.uk/constitution-unit/file/7199), p. 27
 
-Is the South Australian model worth emulating? It certainly creates a large amount of work, which requires resources.Practically speaking, scaling from elections with dozens of seats to hundreds would multiply the work considerably. However the low rate of actual prosecutions should be seen as a sign of success. If the goal of the law is to reduce the number of false statements, claims being submitted every day of an election and passing what is a fairly expansive view of ‘fact’ seems like a good outcome. 
+Is the South Australian model worth emulating? It certainly creates a large amount of work, which requires resources. Practically speaking, scaling from elections with dozens of seats to hundreds would multiply the work considerably. However the low rate of actual prosecutions should be seen as a sign of success. If the goal of the law is to reduce the number of false statements, claims being submitted every day of an election and passing what is a fairly expansive view of ‘fact’ seems like a good outcome. 
 
 ## Aotearoa New Zealand
 
