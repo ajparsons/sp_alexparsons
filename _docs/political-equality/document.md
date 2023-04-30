@@ -40,7 +40,7 @@ There are two major changes in how I understand these criteria versus how Still 
 
 # Universal suffrage
 
->__It doesn't matter _who_ you are, your vote should count the same__
+__It doesn't matter _who_ you are, your vote should count the same__
 
 Universal suffrage is supposed to be the straightforward and easily passed requirement, but the interesting thing about how Still defines this requirement is how quickly he qualifies it:
 
@@ -56,7 +56,7 @@ While Still suggests these criteria are either fulfilled or not, this immediatel
 
 # Equal shares
 
->__It doesn't matter _where_ you are, your vote should count the same __
+__It doesn't matter _where_ you are, your vote should count the same __
 
 Equal shares is specifically a problem of elections based on multiple districts/constituencies. When you divide one polity into multiple constituencies you are creating isolated populations of voters. If these constituencies are different sizes, then the people in each do not have equal shares in the election.
 
@@ -70,7 +70,7 @@ There are ways to procedurally address this (for instance, dynamically weighting
 
 # Independence
 
->__It doesn't matter _which_ party/candidate you vote for, your vote should count the same__
+__It doesn't matter _which_ party/candidate you vote for, your vote should count the same__
 
 Independence is a criteria addressing the issue that the previous two (which are more commonly seen) are disconnected from outcomes. There are any number of electoral designs that allow equality of participation, but where the structure distorts outcomes so that people’s preferences are not treated equally even if their votes are.
 
@@ -82,7 +82,7 @@ While this is useful to understand and measure harm to individual voters, puttin
 
 ## Equal probabilities
 
->__If you change your vote from one party to another, it should have the same impact as anyone else doing the same__
+__If you change your vote from one party to another, it should have the same impact as anyone else doing the same__
 
 Equal probabilities is a fiddly rule related to situations where an election is happening in multiple constituencies, of different sizes with different weights. For instance, if one constituency had 60,000 people and the representative had six votes, and another had 40,000 people and four votes, technically the equal weights criteria is fulfilled while all decision making power rests in the larger constituency. One person changing their vote in one constituency has much more power to change the overall result of the election than a person in the other making the same move. 
 
@@ -103,7 +103,7 @@ This is a useful rule because it provides a simple test of a particular election
 
 ## Majority rule
 
->__The weighting of your vote should not change depending how others vote__
+__The weighting of your vote should not change depending how others vote__
 
 Majority rule says that any requirements for success other than 50% + 1 are unfair to individual voters because it means that one choice rather than another is counted differently. 
 
@@ -113,7 +113,7 @@ Supermajority requirements are stacking the deck, and while there may be princip
 
 # Proportional representation
 
->__Everyone should have the representation they want__
+__Everyone should have the representation they want__
 
 Proportional representation can be understood as a stricter restating of equal shares. This time voters should expect an equal share of a representative they support as opposed to a representative in general. Again, this is taking something generally described as a group right (parties should be entitled seats in relation to the votes they received) and reframing it as an individual right: you should have the representation that you want. 
 
