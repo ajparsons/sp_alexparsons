@@ -1,5 +1,4 @@
-
-$white:    #fff !default;
+$white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -9,20 +8,12 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black: #000 !default;
 $offwhite: #f8f8ff;
 $nice-purple: #7272A5;
 
 $blockquote-main-color: #ffebc5 !default;
 $blockquote-border-color: #cec5a2 !default;
-$navbar-accent-color: $nice-purple!default;
-$navbar-border-color: $nice-purple!default;
+$navbar-accent-color: $nice-purple !default;
+$navbar-border-color: $nice-purple !default;
 
-/* header styling */
-.h1,
-h1,
-h2,
-h3 {
-    text-align: left;
-    font-family: 'Raleway', sans-serif;
-}

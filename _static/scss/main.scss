@@ -2,3 +2,26 @@
 
 @import "org_variables";
 @import "stringprint/main";
+
+/* header styling */
+.h1,
+h1,
+h2,
+h3 {
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content {
+    font-size: 13pt;
+}
+
+blockquote {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.blockquote {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
